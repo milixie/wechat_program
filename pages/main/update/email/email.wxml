@@ -1,0 +1,10 @@
+<import src="../../../common/header.wxml"/>
+<view>
+	<template is="header" data="{{title: '修改邮箱'}}"/>
+	<view class="update-input">
+		<input type="input" name="email" value="{{email}}" placeholder=" 填写新的邮箱地址 " bindinput="getInputValue"/>
+	</view>
+	<view class="update-submit">
+		<button type="button" bindtap="updateTap" class="{{disabled}}">确认修改</button>
+	</view>
+</view>

@@ -1,0 +1,205 @@
+/* pages/add/add.wxss */
+
+.warn {
+	padding: 10rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #fff;
+}
+
+.success {
+	background: green;
+}
+
+.fail {
+	background: red;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.flex1 {
+	flex: 1;
+}
+
+.add{
+	background: #f6f6f6;
+}
+
+.add .title {
+	text-align: center;
+	padding: 20rpx 0;
+	background: #fff;
+	font-size: 24rpx;
+}
+
+.add .active{
+	border-bottom: 6rpx solid #f60;
+}
+
+.add-content {
+	padding: 30rpx;
+	font-size: 24rpx;
+	background: #f6f6f6;
+}
+
+.upload-tit input {
+	background: #fff;
+	padding: 10rpx 20rpx;
+	font-size: 26rpx;
+	border-radius: 10rpx;
+	margin-bottom: 10rpx;
+}
+
+.upload-info textarea {
+	background: #fff;
+	width: 94%;
+	padding: 20rpx;
+	margin-bottom: 60rpx;
+}
+
+.look-info-item {
+	background: #fff;
+	border-radius: 10rpx;
+	padding: 40rpx 20rpx;
+	margin-bottom: 20rpx;
+}
+
+.look-info-item .info-tit {
+	font-size: 36rpx;
+}
+
+.look-info-item .info-con {
+	display: block;
+	margin: 30rpx 0 20rpx;
+	line-height: 1.5em;
+}
+
+.look-info-item .info-time {
+	color: #999;
+}
+
+.search {
+	padding: 20rpx 0;
+}
+
+.search input {
+	padding: 10rpx 30rpx;
+	background: url(../../../images/search.png) center no-repeat #fff;
+	border-radius: 60rpx;
+	font-size: 26rpx;
+	border: none;
+}
+
+button {
+	display: block;
+	margin: 20rpx;
+}
+
+.img-info {
+	background: #fff;
+	margin: 20rpx 0;
+	padding: 20rpx;
+	border-radius: 10rpx;
+}
+
+.img-info text {
+	display: block;
+	line-height: 30rpx;
+}
+
+.show-record {
+	background: #fff;
+	border-radius: 10rpx;
+	padding: 40rpx;
+	letter-spacing: 0.1em;
+	text-align: center;
+	font-size: 60rpx;
+}
+
+/*publish*/
+.publish {
+	background: #fff;
+	border-radius: 10rpx;
+	padding: 20rpx;
+	margin: 20rpx;
+}
+
+.mg {
+	margin: 6rpx 20rpx 0;
+}
+
+/*mark 评论*/
+.mark {
+	display: flex;
+}
+
+.mark-star {
+	display: flex;
+}
+
+.stars {
+	margin: 0 10rpx;
+}
+
+.like-icon {
+	position: relative;
+}
+
+.like {
+	display: flex;
+}
+
+.add-like {
+	position: absolute;
+	top: 30rpx;
+	left: 0;
+	color: red;
+	opacity: 0;
+}
+
+.publish image {
+	width: 16px;
+	height: 16px;
+}
+
+.note image {
+	width: 32px;
+	height: 32px;
+}
+
+.note {
+	position: relative;
+}
+
+.note-icon {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: red;
+	border-radius: 50%;
+	position: absolute;
+	top: 20rpx;
+	left: 70rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

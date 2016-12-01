@@ -1,0 +1,8 @@
+<view>
+	<view class="update-input">
+		<input type="input" name="tel" placeholder=" 填写您的服务内容 " bindinput="getInputValue"/>
+	</view>
+	<view class="update-submit">
+		<button type="button" bindtap="updateTap">确认修改</button>
+	</view>
+</view>

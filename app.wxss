@@ -1,0 +1,57 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40rpx;
+  background: #f6f6f6;
+  box-sizing: border-box;
+} 
+
+.border-line {
+	border-bottom: 1px solid #f6f6f6;
+}
+
+
+
+/*update common wxss*/
+
+.update-input {
+	margin-top: 30rpx;
+	border-top: 1px solid #f6f6f6;
+	border-bottom: 1px solid #f6f6f6;
+}
+
+.update-input input, .update-input textarea {
+	font-size: 30rpx;
+	padding: 20rpx;
+}
+
+.update-submit {
+	margin-top: 200rpx;
+	padding: 20rpx;
+}
+
+.update-submit button {
+	background: #9d55b8;
+	color: #fff;
+}
+
+/*button common disabled*/
+.disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/*template common*/
+.header {
+	text-align: center;
+	font-size: 16px;
+	margin: 40rpx 0 100rpx;
+}
+
+
+
+
