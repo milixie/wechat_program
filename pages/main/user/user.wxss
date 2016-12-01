@@ -1,0 +1,43 @@
+/**user.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.contact {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  line-height: 1.4em;
+}
+
+.contact .contact-wrap{
+  position: relative;
+  padding: 25rpx 60rpx 25rpx 30rpx;
+  background: #fff;
+}
+.contact .contact-wrap image {
+  position: absolute;
+  top: 35rpx;
+  right: 30rpx;
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+}

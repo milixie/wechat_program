@@ -1,0 +1,10 @@
+<import src="../../../common/header.wxml"/>
+<view>
+	<template is="header" data="{{title: '更新地址'}}"/>
+	<view class="update-input">
+		<input type="input" name="address" value="{{address}}" placeholder=" 填写新地址 " bindinput="getInputValue"/>
+	</view>
+	<view class="update-submit">
+		<button type="button" bindtap="updateTap">确认修改</button>
+	</view>
+</view>

@@ -1,0 +1,124 @@
+
+.info-wrap {
+	background: #f6f6f6; 
+	padding: 30rpx;
+}
+
+.pay {
+	padding: 30rpx 0;
+}
+.pay button{
+	background: #9d55b8;
+	color: #fff;
+	margin-bottom: 20rpx;
+}
+
+.list-wraper {
+	margin: 20rpx 0;
+}
+
+.list-wraper image {
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.list-wraper .lists {
+	margin-bottom: 30rpx;
+}
+
+.list-title {
+	position: relative;
+	padding: 40rpx 30rpx;
+	background: #fff;
+	border-radius: 6rpx;
+	margin-top: 20rpx;
+}
+
+.list-title image{
+	position: absolute;
+	right: 30rpx;
+	top: 45rpx;
+	transform: rotate(90deg);
+	transition: all 0.5s;
+}
+
+.list-title-show image{
+	transform: rotate(-90deg);
+}
+
+.list-content {
+	display: none;
+	background: #fff;
+	border-radius: 6rpx;
+}
+
+.list-content navigator {
+	position: relative;
+	padding: 30rpx;
+	border-top: 1px solid #f6f6f6;
+}
+
+.list-content navigator image{
+	position: absolute;
+	right: 30rpx;
+	top: 35rpx;
+}
+
+.list-content-show {
+	display: block;
+}
+
+.form-wraper {
+	margin-top: 40rpx;
+	font-size: 28rpx;
+}
+
+.input-wraper {
+	margin: 20rpx 0;
+	padding: 20rpx 0;
+}
+
+.input-wraper .bind {
+	background: #fff;
+	width: 100%;
+	padding: 10rpx;
+}
+
+.form-wraper text {
+	/*margin: 20rpx;*/
+}
+
+.form-wraper input{
+	background: #fff;
+	padding: 20rpx;
+	margin: 20rpx 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

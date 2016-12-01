@@ -1,0 +1,28 @@
+<!--pages/user/user.wxml-->
+
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="contact">
+    <block wx:for="{{contact}}">
+      <navigator url="{{item.url}}">
+        <view class="contact-wrap border-line">
+          <view class="contact-info">
+            <text>{{item.titName}}</text>
+            <text>{{item.content}}</text>
+          </view>
+          <image src="../../../images/arrowright.png"></image>
+        </view>
+      </navigator>
+    </block>
+    <view class="contact-wrap border-line">
+      <view class="contact-info">
+        <text>提供服务</text>
+        <text>{{servers}}</text>
+      </view>
+    </view>
+  </view>
+</view>

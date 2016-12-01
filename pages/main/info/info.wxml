@@ -1,0 +1,112 @@
+<!--pages/info/info.wxml-->
+
+<view class="info-wrap">
+
+	<view class="show-toast">
+		<text>显示 toast2 </text>
+		<button type="warn" size="mini" plain="true" bindtap="showToast2">点击显示 toast2 状态</button>
+	</view>
+	<view class="show-toast">
+		<text>显示 toast </text>
+		<button type="warn" size="mini" plain="true" bindtap="showToast">点击显示 toast 状态</button>
+	</view>
+
+	<view class="show-modal">
+		<text wx:if="{{clickModalType}}">点击了{{clickModalType}}按钮</text>
+		<button type="primary" size="mini" plain="true" bindtap="showModal">点击显示模态框</button>
+	</view>
+
+	<view class="action-sheet">
+		<text>showActionSheet is {{showActionItem}}</text>
+		<button type="primary" size="mini" bindtap="showActionSheet">点击显示 action-sheet</button>
+	</view>
+
+	<view class="button">
+		<button size="{{buttons.size}}" type="{{buttons.type}}" plain="{{buttons.plain}}" disabled="{{buttons.disabled}}" loading="{{buttons.loading}}" hover-class="{{buttons.hover}}">按钮</button>
+
+		<button bindtap="changeButton">点击更改 plain</button>
+	</view>
+
+	<view class="checkbox">
+		<checkbox-group bindchange="getCheckbox">
+			<label wx:for="{{checkboxs}}">
+				<text>{{item.name}}</text>
+				<checkbox value="{{item.value}}"/>
+			</label>
+		</checkbox-group>
+	</view>
+
+	<view class="textarea">
+		<textarea value="textarea" style="background: #fff;"></textarea>
+	</view>
+
+	<view class="switch">
+		<switch type="switch" checked="true" bindchange="getSwitch"/>
+	</view>
+
+	<view class="slider">
+		<view wx:if="{{slider.status == true}}">
+			<slider min="{{slider.min}}" max="{{slider.max}}" step="{{slider.step}}" value="{{slider.currentValue}}" show-value="{{slider.show}}" bindchange="changeSlider"></slider>
+		</view>
+		<view wx:else>
+			<slider min="0" max="100" step="1" value="0" show-value="true" bindchange="changeSlider"></slider>
+		</view>
+	</view>
+
+	<view class="radio">
+		<radio-group bindchange="radioChange">
+			<label wx:for="{{radios}}">
+				<text>{{item.name}}</text>
+				<radio value="{{item.value}}" checked="{{item.checked}}"/>
+			</label>
+		</radio-group>
+		<text>{{currentRadio}}</text>
+		<button type="warn" bindtap="getRadioValue">点击得到当前选择的 radio </button>
+	</view>
+
+	<view class="picker-selector">
+		<view>选择器：</view>
+		<picker mode="selector" value="{{index}}" range="{{array}}" bindchange="setPicker">
+			<view>
+				<text>当前选择：{{array[index]}}</text>
+			</view>
+		</picker>
+	</view>
+	
+	<button type="primary" plain="true" size="mini" bindtap="payBtn">点击支付</button>
+	<view class="">
+		<button type="warn" bindtap="request" loading="true">发起请求</button>
+		<button type="primary" id="show-event" data-show="hide" bindtap="showEvent">点击显示 event </button>
+
+	</view>
+
+	<view class="list-wraper">
+		<block wx:for="{{list}}" class="lists">
+			<view id="{{item.id}}" class="list-title {{item.open ? 'list-title-show': ''}}" bindtap="listToggle">
+				<text>{{item.name}}</text>
+				<image src="../../../images/arrowright.png"/>
+			</view>
+			<view class="list-content {{item.open ? 'list-content-show': ''}}">
+				<block wx:for="{{item.pages}}" wx:for-item="page">
+					<navigator url="nav/{{page}}/{{page}}">
+						<text>{{page}}</text>
+						<image src="../../../images/arrowright.png"/>
+					</navigator>
+				</block>
+			</view>
+		</block>
+	</view>
+
+	<view class="form-wraper">
+		<block wx:for="{{texts}}" wx:for-item="text">
+			<view class="input-wraper">
+				<text>请输入{{text.type}}</text>
+				<input type="text" id="input_{{index}}" name="{{text.type}}" placeholder=" 请输入 {{text.type}}" placeholder-style="color: red" bindinput="showInputContent"/>
+				<text class="bind">双向绑定效果：{{text.content}}</text>
+			</view>
+		</block>
+
+	</view>
+	
+</view>
+

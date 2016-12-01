@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    
+    "pages/main/add/add",
+
+    "pages/main/user/user",
+    "pages/main/update/tel/tel",
+    "pages/main/update/email/email",
+    "pages/main/update/address/address",
+    "pages/main/update/server/server",
+
+    "pages/main/info/info",
+
+    "pages/main/info/nav/view1/view1",
+    "pages/main/info/nav/view2/view2",
+    "pages/main/info/nav/view3/view3",
+    "pages/main/info/nav/wrap1/wrap1",
+    "pages/main/info/nav/wrap2/wrap2",
+
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundColor": "#f6f6f6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#9d55b8",
+    "navigationBarTitleText": "小程智能人",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#9d55b8",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home0.png",
+      "selectedIconPath": "images/home.png"
+    }, {
+      "pagePath": "pages/main/add/add",
+      "text": "发布",
+      "iconPath": "images/add0.png",
+      "selectedIconPath": "images/add.png"
+    }, {
+      "pagePath": "pages/main/info/info",
+      "text": "消息",
+      "iconPath": "images/info0.png",
+      "selectedIconPath": "images/info.png"
+    }, {
+      "pagePath": "pages/main/user/user",
+      "text": "我的",
+      "iconPath": "images/user0.png",
+      "selectedIconPath": "images/user.png"
+    }]
+  }
+}
