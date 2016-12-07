@@ -49,5 +49,22 @@ Page({
       event.emit('emailChange', that.data.email)
       wx.navigateBack()
     }
+
+    var oldI = wx.getStorageSync('infos')[0];
+
+    var newI = {}
+
+    for (var k in oldI) {
+      if (k === 'email') {
+        newI[k] = that.data.tel
+      } else {
+        newI[k] = oldI[k]
+      }
+    }
+
+    var newInfos = []
+    newInfos.push(newI)
+
+    wx.setStorageSync('infos', newInfos)
   }
 })

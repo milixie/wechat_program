@@ -94,6 +94,27 @@
 	margin: 20rpx 0;
 }
 
+button {
+	width: 100%;
+	margin: 10rpx;
+}
+
+textarea {
+	width: 90%;
+	margin: 20rpx 5%;
+	padding: 20rpx;
+}
+
+text {
+	font-size: 28rpx;
+	display: inline-block;
+	margin: 20rpx;
+}
+
+label {
+	display: inline-block;
+	margin: 20rpx;
+}
 
 
 

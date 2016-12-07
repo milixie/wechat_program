@@ -1,10 +1,36 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
+<!-- <view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view class="pay">
+  	<button type="primary" size="mini" bindtap="pay">发起支付</button>
+  </view>
+</view> -->
+
+<view class="tab-container">
+  <view class="tab-head">
+    <view class="head {{currentTab == 0 ? 'active': ''}}" data-current="0" bindtap="switchBtn">Home</view>
+    <view class="head {{currentTab == 1 ? 'active': ''}}" data-current="1" bindtap="switchBtn">About</view>
+    <view class="head {{currentTab == 2 ? 'active': ''}}" data-current="2" bindtap="switchBtn">Contact</view>
+  </view>
+  <swiper class="swiper" current="{{currentTab}}" bindchange="switchContent" style="height:{{winHeight - 35}}px">
+    <swiper-item class="swiper-item">
+      <view class="home">
+        <!-- <image style="width: {{imgW}}px; height: {{imgH}}px" src="http://bpic.588ku.com/back_pic/00/03/85/1656205138bbe2d.png" bindload="imgLoad"></image> -->
+        <!-- <image style="width: {{imgW}}px; height: {{imgH}}px" src="http://bpic.588ku.com/back_pic/04/07/63/28581203949ca9d.jpg" bindload="imgLoad"></image> -->
+        <image style="width: {{imgW}}px; height: {{imgH}}px" src="http://img1.gtimg.com/ent/pics/hv1/13/71/2061/134034643.jpg" bindload="imgLoad"></image>
+      </view>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <view>这是 about 页面</view>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <view>这是 contact 页面</view>
+    </swiper-item>
+  </swiper>
 </view>
