@@ -39,8 +39,35 @@ function limitWord(word, n) {
   return true
 }
 
+// 生成随机字符串
+function randomString() {
+  // return Math.random().toString(32).substring(5)
+
+  var random = ''
+
+  for (var i = 0 ; i < 5; i++) {
+    random += Math.random().toString(32).substr(4,6)
+  }
+  random += Math.random().toString(32).substr(5, 2)
+  return random
+}
+
+// post 请求中： "Content-Type": "application/x-www-form-urlencoded" 或者将"Content-Type"写成小写："content-type"
+// get 请求中：'Content-Type': 'application/json'
+
+// post 请求将 object 的 data 传递给后端时 post 不成功，需要使用如下的方法，将 json 格式转换一下就可以了
+function json2Form(json) {  
+  var str = [];  
+  for(var p in json){  
+      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(json[p]));  
+  }  
+  return str.join("&");  
+}
+
 module.exports = {
   formatTime: formatTime,
   formatRecordTime: formatRecordTime,
-  limitWord: limitWord
+  limitWord: limitWord,
+  randomString: randomString,
+  json2Form: json2Form
 }

@@ -9,19 +9,20 @@ Page({
     animationWarn: {},
     animationLike: {},
     noteExist: true,
-    likeNum: 12321,
-    hasLike: false,
-    likeSrc: 'like_0',
-    currentCount: 0,
+    zan: '已赞',
+    likeNum: 12322,
+    hasLike: true,
+    likeSrc: 'like_1',
+    currentCount: 3,
     stars: [{
       count: 0,
-      src: 'star_0'
+      src: 'star_1'
     }, {
       count: 1,
-      src: 'star_0'
+      src: 'star_1'
     }, {
       count: 2,
-      src: 'star_0'
+      src: 'star_1'
     }, {
       count: 3,
       src: 'star_0'
@@ -328,6 +329,7 @@ Page({
         warn: true,
         alert: '已赞',
         animationWarn: animation2.export(),
+        zan: '已赞',
         likeNum: num,
         hasLike: true,
         likeSrc: 'like_1',

@@ -1,6 +1,20 @@
 // pages/info/info.js
+var imgSize = require('../../../utils/imgSize.js')
+var util = require('../../../utils/util.js')
 Page({
   data:{
+    showCurrentTime: 0,
+    date1: '2016-11-08',  
+    time1: '12:00',  
+    array1: ['中国', '巴西', '日本', '美国'],  
+    index1: 0,  
+    swipers: [
+      "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
+      "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
+      "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+    ],
+    imgW: 0,
+    imgH: 0,
     showActionItem: 'Red',
     buttons: {
       size: 'mini',
@@ -44,6 +58,7 @@ Page({
     }],
     array: ['中国', '法国', '日本', '韩国', '新加坡'],
     index: 3,
+    currentSelect: '中国',
     texts: [{
       type: '普通文本',
       content: '',
@@ -83,6 +98,9 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
+    this.setData({
+      showCurrentTime: util.formatTime(new Date())
+    })
   },
   onReady:function(){
     // 页面渲染完成
@@ -95,6 +113,34 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+
+  //  点击时间组件确定事件  
+  bindTimeChange: function (e) {  
+    this.setData({  
+      time1: e.detail.value  
+    })  
+  },  
+  //  点击日期组件确定事件  
+  bindDateChange: function (e) {  
+    this.setData({  
+      date1: e.detail.value  
+    })  
+  },  
+  //  点击国家组件确定事件  
+  bindPickerChange: function (e) {  
+    this.setData({  
+      index1: e.detail.value  
+    })  
+  },
+
+  imgLoad: function(e){
+    var that = this
+    var imgUtil = imgSize.imgSize(e)
+    this.setData({
+      imgW: imgUtil.imgW,
+      imgH: imgUtil.imgH
+    })
   },
 
   payBtn: function(){
@@ -175,7 +221,8 @@ Page({
     console.log(e)
 
     this.setData({
-      index: e.detail.value
+      index: e.detail.value,
+      currentSelect: this.data.array[e.detail.value]
     })
 
     console.log(this.data.index, '-----')

@@ -50,7 +50,7 @@
 	</view>
 
 	<view class="like publish">
-		<text class="mg">点赞</text>
+		<text class="mg">{{zan}}</text>
 		<view class="like-icon">
 			<image src="../../../images/{{likeSrc}}.png" bindtap="addLikeNumber"></image>
 			<view animation="{{animationLike}}" class="add-like">+1</view>

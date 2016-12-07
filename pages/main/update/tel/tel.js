@@ -52,5 +52,23 @@ Page({
       event.emit('telChange', that.data.tel)
       wx.navigateBack()
     }
+
+    var oldI = wx.getStorageSync('infos')[0];
+
+    var newI = {}
+
+    for (var k in oldI) {
+      if (k === 'tel') {
+        newI[k] = that.data.tel
+      } else {
+        newI[k] = oldI[k]
+      }
+    }
+
+    var newInfos = []
+    newInfos.push(newI)
+
+    wx.setStorageSync('infos', newInfos)
+
   }
 })

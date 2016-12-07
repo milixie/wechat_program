@@ -35,6 +35,23 @@ Page({
 
     event.emit('addressChange', that.data.address)
 
+    var oldI = wx.getStorageSync('infos')[0];
+
+    var newI = {}
+
+    for (var k in oldI) {
+      if (k === 'address') {
+        newI[k] = that.data.tel
+      } else {
+        newI[k] = oldI[k]
+      }
+    }
+
+    var newInfos = []
+    newInfos.push(newI)
+
+    wx.setStorageSync('infos', newInfos)
+
     wx.navigateBack()
   }
 })
