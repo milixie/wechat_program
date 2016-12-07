@@ -3,6 +3,7 @@ var util = require('../../../utils/util.js')
 var event = require('../../../utils/event.js')
 Page({
   data:{
+    chooseImageUrl: '',
     warn: false,
     warnStatus: true,
     alert: '',
@@ -232,8 +233,16 @@ Page({
   showChooseImgInfo: function() {
     var that = this
     wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有  
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有  
       success: function(res) {
+        console.log(res)
         var tempPath = res.tempFilePaths
+        console.log('图片地址~~~~~~', tempPath)
+        that.setData({
+          chooseImageUrl: res.tempFilePaths
+        })
         wx.getImageInfo({
           src: tempPath[0],
           success: function(res) {

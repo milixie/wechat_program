@@ -27,10 +27,32 @@
       </view>
     </swiper-item>
     <swiper-item class="swiper-item">
-      <view>这是 about 页面</view>
+      <view class="page">
+        <view class="page-bottom flex vflex">
+          <view class="head">这是你的头像以及设置的部分</view>
+          <view class="flex1 scroll">
+            <block wx:for="{{navs}}" wx:for-item="nav">
+              <navigator url="{{nav.url}}" class="nav">{{nav.name}}</navigator>
+            </block>
+          </view>
+        </view>
+        <!-- <view class="page-top {{open ? 'open': ''}}" bindtap="toggleNav">
+          <image src="../../images/nav.png" class="nav-btn"></image>
+        </view> -->
+        <view class="page-top {{open1 ? 'open1': ''}}" bindtap="toggleNav1">
+          <image src="../../images/nav.png" class="nav-btn"></image>
+        </view>
+      </view>
     </swiper-item>
     <swiper-item class="swiper-item">
-      <view>这是 contact 页面</view>
+      <view class="section tc">
+        <video id="myvideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" danmu-btn="true" enable-danmu="true"></video>
+        <view class="btn-area">
+          <button bindtap="bindButtonTap">获取视频</button>
+          <input bindblur="bindInputBlur"/>
+          <button bindtap="bindSendDanmu">发送弹幕</button>
+        </view>
+      </view>
     </swiper-item>
   </swiper>
 </view>

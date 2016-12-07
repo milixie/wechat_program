@@ -81,6 +81,7 @@
 			<text>图片宽度： {{chooseImg.width}} px</text>
 			<text>图片高度： {{chooseImg.height}} px</text>
 			<button size="mini" type="primary" plain="true" bindtap="showChooseImgInfo">点击显示上传图片的信息</button>
+			<image src="{{chooseImageUrl}}" mode="aspecFill"></image>
 		</view>
 	</view>
 </view>
